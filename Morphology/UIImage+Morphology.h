@@ -1,5 +1,5 @@
 //
-//  AppDelegate.m
+//  UIImage+Morphology.h
 //  Morphology
 //
 //  Created by Warren Moore on 2/21/13.
@@ -26,18 +26,27 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
-#import "AppDelegate.h"
-#import "MorphologyDemoViewController.h"
+#import <UIKit/UIKit.h>
 
-@implementation AppDelegate
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+typedef NS_ENUM(NSInteger, AHMorphologyStructuringElement)
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-	self.window.rootViewController = [[MorphologyDemoViewController alloc] initWithNibName:@"MorphologyDemoView" bundle:nil];
-    [self.window makeKeyAndVisible];
-    return YES;
-}
+	AHMorphologyStructuringElementRect,
+	AHMorphologyStructuringElementCross,
+	AHMorphologyStructuringElementDiamond,
+	AHMorphologyStructuringElementDisk
+};
+
+@interface UIImage (AHMorphology)
+
+// `size` specifies the "radius" of the structuring element in device points.
+// The actual size of the kernel used will be (2 * size * scale + 1).
+// This ensures that the kernel is always of odd size, and that therefore
+// the kernel is always symmetrical about the anchor (center) point.
+
+// Extract the alpha channel of this image, then dilate it by the specified amount and return as a grayscale image
+- (UIImage *)maskImageDilatedWithStructuringElement:(AHMorphologyStructuringElement)type size:(CGFloat)size iterations:(NSInteger)iterations;
+
+// Extract the alpha channel of this image, then dilate it by the specified amount and return as a grayscale image
+- (UIImage *)maskImageErodedWithStructuringElement:(AHMorphologyStructuringElement)type size:(CGFloat)size iterations:(NSInteger)iterations;
 
 @end

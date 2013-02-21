@@ -1,5 +1,5 @@
 //
-//  AppDelegate.m
+//  StrokedImageView.h
 //  Morphology
 //
 //  Created by Warren Moore on 2/21/13.
@@ -26,18 +26,12 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
-#import "AppDelegate.h"
-#import "MorphologyDemoViewController.h"
+#import <UIKit/UIKit.h>
 
-@implementation AppDelegate
+@interface AHStrokedImageView : UIView
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-	self.window.rootViewController = [[MorphologyDemoViewController alloc] initWithNibName:@"MorphologyDemoView" bundle:nil];
-    [self.window makeKeyAndVisible];
-    return YES;
-}
+@property(nonatomic, retain) UIImage *image;
+@property(nonatomic, retain) UIColor *strokeColor;
+@property(nonatomic, assign) CGFloat strokeWidth;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  AppDelegate.m
+//  MorphologyDemoViewController.h
 //  Morphology
 //
 //  Created by Warren Moore on 2/21/13.
@@ -26,18 +26,13 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
-#import "AppDelegate.h"
-#import "MorphologyDemoViewController.h"
+#import <UIKit/UIKit.h>
+#import "AHStrokedImageView.h"
 
-@implementation AppDelegate
+@interface MorphologyDemoViewController : UIViewController
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-	self.window.rootViewController = [[MorphologyDemoViewController alloc] initWithNibName:@"MorphologyDemoView" bundle:nil];
-    [self.window makeKeyAndVisible];
-    return YES;
-}
+@property (weak, nonatomic) IBOutlet AHStrokedImageView *imageView;
+
+- (IBAction)kernelSizeSliderValueChanged:(UISlider *)sender;
 
 @end

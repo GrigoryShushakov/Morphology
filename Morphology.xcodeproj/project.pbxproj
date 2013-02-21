@@ -16,6 +16,12 @@
 		80BFC74C16D66EC1005858AA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 80BFC74B16D66EC1005858AA /* Default.png */; };
 		80BFC74E16D66EC1005858AA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80BFC74D16D66EC1005858AA /* Default@2x.png */; };
 		80BFC75016D66EC1005858AA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80BFC74F16D66EC1005858AA /* Default-568h@2x.png */; };
+		80BFC75816D67D1D005858AA /* UIImage+Morphology.m in Sources */ = {isa = PBXBuildFile; fileRef = 80BFC75716D67D1D005858AA /* UIImage+Morphology.m */; };
+		80BFC75C16D68CBE005858AA /* MorphologyDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80BFC75A16D68CBE005858AA /* MorphologyDemoViewController.m */; };
+		80BFC75D16D68CBE005858AA /* MorphologyDemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80BFC75B16D68CBE005858AA /* MorphologyDemoView.xib */; };
+		80BFC76416D6A163005858AA /* AHStrokedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80BFC76316D6A163005858AA /* AHStrokedImageView.m */; };
+		80BFC76916D6A781005858AA /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 80BFC76716D6A781005858AA /* apple.png */; };
+		80BFC76A16D6A781005858AA /* apple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80BFC76816D6A781005858AA /* apple@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,15 @@
 		80BFC74B16D66EC1005858AA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		80BFC74D16D66EC1005858AA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		80BFC74F16D66EC1005858AA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		80BFC75616D67D1D005858AA /* UIImage+Morphology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Morphology.h"; sourceTree = "<group>"; };
+		80BFC75716D67D1D005858AA /* UIImage+Morphology.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Morphology.m"; sourceTree = "<group>"; };
+		80BFC75916D68CBE005858AA /* MorphologyDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorphologyDemoViewController.h; sourceTree = "<group>"; };
+		80BFC75A16D68CBE005858AA /* MorphologyDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MorphologyDemoViewController.m; sourceTree = "<group>"; };
+		80BFC75B16D68CBE005858AA /* MorphologyDemoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MorphologyDemoView.xib; sourceTree = "<group>"; };
+		80BFC76216D6A163005858AA /* AHStrokedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHStrokedImageView.h; sourceTree = "<group>"; };
+		80BFC76316D6A163005858AA /* AHStrokedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHStrokedImageView.m; sourceTree = "<group>"; };
+		80BFC76716D6A781005858AA /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
+		80BFC76816D6A781005858AA /* apple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +95,13 @@
 			children = (
 				80BFC74816D66EC1005858AA /* AppDelegate.h */,
 				80BFC74916D66EC1005858AA /* AppDelegate.m */,
+				80BFC75916D68CBE005858AA /* MorphologyDemoViewController.h */,
+				80BFC75A16D68CBE005858AA /* MorphologyDemoViewController.m */,
+				80BFC75B16D68CBE005858AA /* MorphologyDemoView.xib */,
+				80BFC76216D6A163005858AA /* AHStrokedImageView.h */,
+				80BFC76316D6A163005858AA /* AHStrokedImageView.m */,
+				80BFC75616D67D1D005858AA /* UIImage+Morphology.h */,
+				80BFC75716D67D1D005858AA /* UIImage+Morphology.m */,
 				80BFC74016D66EC1005858AA /* Supporting Files */,
 			);
 			path = Morphology;
@@ -88,6 +110,8 @@
 		80BFC74016D66EC1005858AA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				80BFC76716D6A781005858AA /* apple.png */,
+				80BFC76816D6A781005858AA /* apple@2x.png */,
 				80BFC74116D66EC1005858AA /* Morphology-Info.plist */,
 				80BFC74216D66EC1005858AA /* InfoPlist.strings */,
 				80BFC74516D66EC1005858AA /* main.m */,
@@ -154,6 +178,9 @@
 				80BFC74C16D66EC1005858AA /* Default.png in Resources */,
 				80BFC74E16D66EC1005858AA /* Default@2x.png in Resources */,
 				80BFC75016D66EC1005858AA /* Default-568h@2x.png in Resources */,
+				80BFC75D16D68CBE005858AA /* MorphologyDemoView.xib in Resources */,
+				80BFC76916D6A781005858AA /* apple.png in Resources */,
+				80BFC76A16D6A781005858AA /* apple@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +193,9 @@
 			files = (
 				80BFC74616D66EC1005858AA /* main.m in Sources */,
 				80BFC74A16D66EC1005858AA /* AppDelegate.m in Sources */,
+				80BFC75816D67D1D005858AA /* UIImage+Morphology.m in Sources */,
+				80BFC75C16D68CBE005858AA /* MorphologyDemoViewController.m in Sources */,
+				80BFC76416D6A163005858AA /* AHStrokedImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  AppDelegate.m
+//  MorphologyDemoViewController.m
 //  Morphology
 //
 //  Created by Warren Moore on 2/21/13.
@@ -26,18 +26,30 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
-#import "AppDelegate.h"
 #import "MorphologyDemoViewController.h"
+#import "UIImage+Morphology.h"
 
-@implementation AppDelegate
+@implementation MorphologyDemoViewController
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-	self.window.rootViewController = [[MorphologyDemoViewController alloc] initWithNibName:@"MorphologyDemoView" bundle:nil];
-    [self.window makeKeyAndVisible];
-    return YES;
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+	self.imageView.image = [UIImage imageNamed:@"apple"];
+	self.imageView.strokeColor = [UIColor colorWithRed:0.0 green:168.0/255 blue:225.0/255 alpha:1.0];
+}
+
+- (IBAction)kernelSizeSliderValueChanged:(UISlider *)sender
+{
+	self.imageView.strokeWidth = sender.value;
 }
 
 @end
